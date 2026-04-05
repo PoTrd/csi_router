@@ -1,0 +1,2 @@
+source /Users/paultaurand/Projects/csi_recv_router/build/bootloader/gdbinit/symbols
+source /Users/paultaurand/Projects/csi_recv_router/build/bootloader/gdbinit/connect
