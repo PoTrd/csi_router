@@ -1,4 +1,7 @@
 ## IDF Component Manager Manifest File
 dependencies:
-  idf: ">=4.4.1"
-  esp_csi_gain_ctrl: ">=0.1.4"
+  idf: '>=4.4.1'
+  esp_csi_gain_ctrl: '>=0.1.4'
+  espressif/esp_lvgl_port: ^2.7.2
+  espressif/esp_lcd_touch: ^1.2.1
+  lvgl/lvgl: ^9

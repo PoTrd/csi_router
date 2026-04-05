@@ -10,18 +10,18 @@ if(NOT EXISTS "/Users/paultaurand/esp/v5.5.1/esp-idf/components/bootloader/subpr
   file(MAKE_DIRECTORY "/Users/paultaurand/esp/v5.5.1/esp-idf/components/bootloader/subproject")
 endif()
 file(MAKE_DIRECTORY
-  "/Users/paultaurand/Projects/csi_recv_router/build/bootloader"
-  "/Users/paultaurand/Projects/csi_recv_router/build/bootloader-prefix"
-  "/Users/paultaurand/Projects/csi_recv_router/build/bootloader-prefix/tmp"
-  "/Users/paultaurand/Projects/csi_recv_router/build/bootloader-prefix/src/bootloader-stamp"
-  "/Users/paultaurand/Projects/csi_recv_router/build/bootloader-prefix/src"
-  "/Users/paultaurand/Projects/csi_recv_router/build/bootloader-prefix/src/bootloader-stamp"
+  "/Users/paultaurand/Projects/csi_router/build/bootloader"
+  "/Users/paultaurand/Projects/csi_router/build/bootloader-prefix"
+  "/Users/paultaurand/Projects/csi_router/build/bootloader-prefix/tmp"
+  "/Users/paultaurand/Projects/csi_router/build/bootloader-prefix/src/bootloader-stamp"
+  "/Users/paultaurand/Projects/csi_router/build/bootloader-prefix/src"
+  "/Users/paultaurand/Projects/csi_router/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/Users/paultaurand/Projects/csi_recv_router/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/Users/paultaurand/Projects/csi_router/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/Users/paultaurand/Projects/csi_recv_router/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/Users/paultaurand/Projects/csi_router/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

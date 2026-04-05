@@ -1,4 +1,4 @@
-# Install script for directory: /Users/paultaurand/Projects/csi_recv_router/main
+# Install script for directory: /Users/paultaurand/Projects/csi_router/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/paultaurand/Projects/csi_recv_router/managed_components/espressif__cmake_utilities
+# Install script for directory: /Users/paultaurand/Projects/csi_router/managed_components/espressif__cmake_utilities
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

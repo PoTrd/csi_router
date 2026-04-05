@@ -13,8 +13,8 @@ end
 
 # Load bootloader symbols
 set confirm off
-    add-symbol-file /Users/paultaurand/Projects/csi_recv_router/build/bootloader/bootloader.elf
+    add-symbol-file /Users/paultaurand/Projects/csi_router/build/bootloader/bootloader.elf
 set confirm on
 
 # Load application symbols
-file /Users/paultaurand/Projects/csi_recv_router/build/csi_recv_router.elf
+file /Users/paultaurand/Projects/csi_router/build/csi_router.elf

@@ -17,4 +17,4 @@ set confirm off
 set confirm on
 
 # Load application symbols
-file /Users/paultaurand/Projects/csi_recv_router/build/bootloader/bootloader.elf
+file /Users/paultaurand/Projects/csi_router/build/bootloader/bootloader.elf
