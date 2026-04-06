@@ -1,6 +1,6 @@
 # Partition Table Documentation
 
-This project uses a custom ESP-IDF partition table defined in [partitions.csv](/Users/paultaurand/Projects/csi_router/partitions.csv).
+This project uses a custom ESP-IDF partition table defined in [partitions.csv](.../csi_router/partitions.csv).
 
 ## Current Layout
 
