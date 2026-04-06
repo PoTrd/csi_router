@@ -1,10 +1,6 @@
-menu "Board BSP"
+menu "BSP"
 
-config WIFI_ENABLED
-    bool "Enable WiFi"
-    default y
-
-config BOARD_PIN_LCD_MOSI
+    config BOARD_PIN_LCD_MOSI
     int "LCD MOSI pin"
     default 39
 

@@ -28,7 +28,7 @@ This project currently reads:
 
 - LVGL examples and demos should stay disabled. They increase firmware size a lot and are not needed for this application.
 - The project should use a large single-app partition table. The default 1 MB factory app partition is too small once LVGL is included.
-- `board_bsp.c` is currently only a compile-safe BSP stub. You still need to bind the real LCD panel and touch controller for the Waveshare board to get actual display and touch runtime behavior.
+- `bsp.c` is currently only a compile-safe BSP stub. You still need to bind the real LCD panel and touch controller for the Waveshare board to get actual display and touch runtime behavior.
 - Wi-Fi CSI support must remain enabled.
 
 ### Recommended menuconfig values

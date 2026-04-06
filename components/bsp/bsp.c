@@ -15,7 +15,7 @@ static const char *TAG = "bsp";
 static const spi_host_device_t BOARD_LCD_SPI_HOST = SPI2_HOST;
 static const i2c_port_num_t BOARD_TOUCH_I2C_PORT = I2C_NUM_0;
 static const uint32_t BOARD_TOUCH_I2C_SPEED_HZ = 400000;
-static const size_t BOARD_LCD_DRAW_BUF_LINES = 50;
+static const size_t BOARD_LCD_DRAW_BUF_LINES = 40;
 
 static esp_lcd_panel_io_handle_t s_panel_io = NULL;
 static esp_lcd_panel_handle_t s_panel = NULL;
@@ -76,8 +76,6 @@ static esp_err_t bsp_init_lcd(void)
     ESP_RETURN_ON_ERROR(esp_lcd_new_panel_jd9853(s_panel_io, &panel_config, &s_panel), TAG, "jd9853 init failed");
     ESP_RETURN_ON_ERROR(esp_lcd_panel_reset(s_panel), TAG, "panel reset failed");
     ESP_RETURN_ON_ERROR(esp_lcd_panel_init(s_panel), TAG, "panel init failed");
-    ESP_RETURN_ON_ERROR(esp_lcd_panel_invert_color(s_panel, true), TAG, "panel invert failed");
-    ESP_RETURN_ON_ERROR(esp_lcd_panel_mirror(s_panel, false, false), TAG, "panel mirror failed");
     ESP_RETURN_ON_ERROR(esp_lcd_panel_disp_on_off(s_panel, true), TAG, "panel enable failed");
 
     ESP_LOGI(TAG, "LCD panel initialized");
@@ -110,7 +108,7 @@ static esp_err_t bsp_init_touch(void)
         },
         .flags = {
             .swap_xy = 0,
-            .mirror_x = 1,
+            .mirror_x = 0,
             .mirror_y = 0,
         },
     };
