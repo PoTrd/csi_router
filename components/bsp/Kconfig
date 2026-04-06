@@ -1,0 +1,47 @@
+menu "Board BSP"
+
+config WIFI_ENABLED
+    bool "Enable WiFi"
+    default y
+
+config BOARD_PIN_LCD_MOSI
+    int "LCD MOSI pin"
+    default 39
+
+config BOARD_PIN_LCD_SCLK
+    int "LCD SCLK pin"
+    default 38
+
+config BOARD_PIN_LCD_CS
+    int "LCD CS pin"
+    default 21
+
+config BOARD_PIN_LCD_DC
+    int "LCD DC pin"
+    default 45
+
+config BOARD_PIN_LCD_RST
+    int "LCD RST pin"
+    default 40
+
+config BOARD_PIN_LCD_BL
+    int "LCD backlight pin"
+    default 46
+
+config BOARD_PIN_TOUCH_SDA
+    int "Touch SDA pin"
+    default 42
+
+config BOARD_PIN_TOUCH_SCL
+    int "Touch SCL pin"
+    default 41
+
+config BOARD_PIN_TOUCH_INT
+    int "Touch INT pin"
+    default 47
+
+config BOARD_PIN_TOUCH_RST
+    int "Touch RST pin"
+    default 48
+
+endmenu

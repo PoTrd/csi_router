@@ -4,6 +4,51 @@
 
 The device triggers the router to send packets through the Ping command to obtain the CSI data between the device and the router
 
+## Project-specific configuration
+
+This fork targets the Waveshare ESP32-S3 Touch LCD 1.47 and adds LVGL/UI structure on top of the CSI router receiver example.
+
+### Wi-Fi configuration
+
+Set the Wi-Fi credentials in `idf.py menuconfig`:
+
+`Example Configuration ->`
+- `WiFi SSID`
+- `WiFi Password`
+- `Maximum retry`
+- `Authentication mode`
+
+This project currently reads:
+- `CONFIG_EXAMPLE_WIFI_SSID`
+- `CONFIG_EXAMPLE_WIFI_PASSWORD`
+- `CONFIG_EXAMPLE_WIFI_CONN_MAX_RETRY`
+- scan/auth related `CONFIG_EXAMPLE_WIFI_*` options
+
+### Important build settings
+
+- LVGL examples and demos should stay disabled. They increase firmware size a lot and are not needed for this application.
+- The project should use a large single-app partition table. The default 1 MB factory app partition is too small once LVGL is included.
+- `board_bsp.c` is currently only a compile-safe BSP stub. You still need to bind the real LCD panel and touch controller for the Waveshare board to get actual display and touch runtime behavior.
+- Wi-Fi CSI support must remain enabled.
+
+### Recommended menuconfig values
+
+In `Component config -> LVGL configuration`:
+- disable `Build examples`
+- disable `Build demos`
+
+In `Partition Table`:
+- select `Single factory app (large), no OTA`
+
+### Build
+
+After changing configuration, rebuild with:
+
+```sh
+idf.py fullclean
+idf.py build
+```
+
 ## How to use example
 Before project configuration and build, be sure to set the correct chip target using `idf.py set-target <chip_name>`.
 

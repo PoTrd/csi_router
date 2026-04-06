@@ -1,2 +1,5 @@
-idf_component_register(SRC_DIRS "."
-                       INCLUDE_DIRS ".")
+idf_component_register(
+    SRCS "app_main.c"
+    INCLUDE_DIRS "."
+    REQUIRES bsp ui csi_app nvs_flash
+)
