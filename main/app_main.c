@@ -15,9 +15,4 @@ void app_main()
     ESP_ERROR_CHECK(bsp_init());
     ESP_ERROR_CHECK(ui_init());
     ret = csi_app_init();
-    if (ret != ESP_OK) {
-        ui_set_status("UI ready - CSI offline");
-    } else {
-        ui_set_status("Init OK");
-    }
 }
